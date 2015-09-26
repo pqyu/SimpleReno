@@ -13,6 +13,7 @@
 		B6C88B191BB62105006114F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C88B171BB62105006114F0 /* Main.storyboard */; };
 		B6C88B1B1BB62105006114F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C88B1A1BB62105006114F0 /* Assets.xcassets */; };
 		B6C88B1E1BB62105006114F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C88B1C1BB62105006114F0 /* LaunchScreen.storyboard */; };
+		B6C88B2B1BB63A3A006114F0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B2A1BB63A3A006114F0 /* SignupViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B6C88B1A1BB62105006114F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6C88B1D1BB62105006114F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6C88B1F1BB62105006114F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6C88B2A1BB63A3A006114F0 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleReno.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +100,8 @@
 		B6C88B261BB6214C006114F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B6C88B151BB62105006114F0 /* InitialViewController.swift */,
+				B6C88B281BB639E8006114F0 /* Login */,
+				B6C88B291BB639F3006114F0 /* Signup */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +113,22 @@
 				B6C88B1F1BB62105006114F0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6C88B281BB639E8006114F0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B6C88B151BB62105006114F0 /* InitialViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B6C88B291BB639F3006114F0 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				B6C88B2A1BB63A3A006114F0 /* SignupViewController.swift */,
+			);
+			name = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C88B2B1BB63A3A006114F0 /* SignupViewController.swift in Sources */,
 				B6C88B161BB62105006114F0 /* InitialViewController.swift in Sources */,
 				B6C88B141BB62105006114F0 /* AppDelegate.swift in Sources */,
 			);
