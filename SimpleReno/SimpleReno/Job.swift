@@ -13,8 +13,9 @@ import Parse
 class Job: PFObject {
     @NSManaged var category: String?
     @NSManaged var comment: String?
+    @NSManaged var createdBy: PFUser
     @NSManaged var descriptionText: String? //need to fix at parse backend
-    @NSManaged var expiryAt: NSDate
+    @NSManaged var expiryOn: NSDate
     @NSManaged var photo: PFFile
     @NSManaged var rating: Int
     @NSManaged var status: Int

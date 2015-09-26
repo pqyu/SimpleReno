@@ -21,7 +21,19 @@ class JobsTableViewController: PFQueryTableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifiers.JobDetailSegue {
+            //should pass the VC the Job to show the details for
         }
+    }
+}
+
+//MARK: TableViewDataSource methods
+extension JobsTableViewController {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? JobsTableViewCell else { fatalError("unexpected error where tableView couldn't dequeue the cell") }
+        guard let jobs = objects as? [Job] else { fatalError("unexpected objects from parse") }
+        let job = jobs[indexPath.row]
+        cell.populateCell(job)
+        return cell
     }
 }
 

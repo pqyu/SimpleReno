@@ -12,6 +12,13 @@ class JobsTableViewCell: PFTableViewCell {
     @IBOutlet weak var jobImageView: PFImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
+    
+    func populateCell(job: Job) {
+        jobImageView.file = job.photo
+        jobImageView.loadInBackground()
+        categoryLabel.text = job.category
+        descriptionText.text = job.descriptionText
+    }
 }
 
 //MARK: Private helper methods
