@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "latest"
+  },
+  "applications": {
+    "SimpleReno": {
+      "applicationId": "KdGvFfI2XPG3iLlF0CpLzOIWnPwlCXKxR1Zrgk8l",
+      "masterKey": "VQg5bVJwp3PD0YmUBJxH1e4CuDYIr12Sm4Kk8oBg"
+    },
+    "_default": {
+      "link": "SimpleReno"
+    }
+  }
+}
