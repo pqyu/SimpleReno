@@ -21,11 +21,17 @@ class JobsTableViewController: PFQueryTableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifiers.JobDetailSegue {
-            //segue to detail, give it the job
         }
     }
 }
 
+//MARK: TableViewDelegate
+extension JobsTableViewController {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier(SegueIdentifiers.JobDetailSegue, sender: nil)
+    }
+}
 //MARK: @IBActions
 private extension JobsTableViewController {
     
