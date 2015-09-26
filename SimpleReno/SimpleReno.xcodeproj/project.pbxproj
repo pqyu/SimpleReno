@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B1BF1711E532CE5908144C /* Pods_SimpleReno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB5DCFF87CDAF1463231174 /* Pods_SimpleReno.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B6C88B141BB62105006114F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B131BB62105006114F0 /* AppDelegate.swift */; };
 		B6C88B161BB62105006114F0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B151BB62105006114F0 /* InitialViewController.swift */; };
 		B6C88B191BB62105006114F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C88B171BB62105006114F0 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8AB5DCFF87CDAF1463231174 /* Pods_SimpleReno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleReno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9264E139F6A4C102AB4618F /* Pods-SimpleReno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleReno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno.debug.xcconfig"; sourceTree = "<group>"; };
 		B6C88B101BB62105006114F0 /* SimpleReno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleReno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C88B131BB62105006114F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C88B151BB62105006114F0 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		B6C88B1A1BB62105006114F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6C88B1D1BB62105006114F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6C88B1F1BB62105006114F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleReno.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B1BF1711E532CE5908144C /* Pods_SimpleReno.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06D44C5405C945371FEF3B3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9264E139F6A4C102AB4618F /* Pods-SimpleReno.debug.xcconfig */,
+				CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A83C43BA9B2A7B5C6682302C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AB5DCFF87CDAF1463231174 /* Pods_SimpleReno.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B6C88B071BB62105006114F0 = {
 			isa = PBXGroup;
 			children = (
 				B6C88B121BB62105006114F0 /* SimpleReno */,
 				B6C88B111BB62105006114F0 /* Products */,
+				06D44C5405C945371FEF3B3A /* Pods */,
+				A83C43BA9B2A7B5C6682302C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6C88B221BB62105006114F0 /* Build configuration list for PBXNativeTarget "SimpleReno" */;
 			buildPhases = (
+				31E23B0F6885EA682A0A0DBB /* Check Pods Manifest.lock */,
 				B6C88B0C1BB62105006114F0 /* Sources */,
 				B6C88B0D1BB62105006114F0 /* Frameworks */,
 				B6C88B0E1BB62105006114F0 /* Resources */,
+				9278DC13057818F73D925D4C /* Embed Pods Frameworks */,
+				CB20178C58F4DE33ABACFC9F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31E23B0F6885EA682A0A0DBB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9278DC13057818F73D925D4C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB20178C58F4DE33ABACFC9F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6C88B0C1BB62105006114F0 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		B6C88B231BB62105006114F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9264E139F6A4C102AB4618F /* Pods-SimpleReno.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SimpleReno/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		B6C88B241BB62105006114F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SimpleReno/Info.plist;
@@ -309,6 +386,7 @@
 				B6C88B241BB62105006114F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
