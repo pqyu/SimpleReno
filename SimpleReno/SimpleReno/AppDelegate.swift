@@ -10,15 +10,21 @@ import UIKit
 import Parse
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+final class AppDelegate: UIResponder {
     var window: UIWindow?
     static let parseApplicationID = "KdGvFfI2XPG3iLlF0CpLzOIWnPwlCXKxR1Zrgk8l"
     static let parseClientKey = "t2CqkeGBKlypk7IU7RRXVUVftXZnaXt0ycn4Nbg8"
+}
 
+//MARK: UIApplicationDelegate
+extension AppDelegate: UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Parse.setApplicationId(AppDelegate.parseApplicationID, clientKey: AppDelegate.parseClientKey)
         return true
     }
 }
 
+//MARK: Private helper methods
+private extension AppDelegate {
+    
+}
