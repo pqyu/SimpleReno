@@ -14,6 +14,11 @@
 		B6C88B1B1BB62105006114F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C88B1A1BB62105006114F0 /* Assets.xcassets */; };
 		B6C88B1E1BB62105006114F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C88B1C1BB62105006114F0 /* LaunchScreen.storyboard */; };
 		B6C88B2B1BB63A3A006114F0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B2A1BB63A3A006114F0 /* SignupViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B6C88B2E1BB63FAF006114F0 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B2D1BB63FAF006114F0 /* JobsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B6C88B301BB6414A006114F0 /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B2F1BB6414A006114F0 /* JobsTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B6C88B331BB642F4006114F0 /* Bid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B321BB642F4006114F0 /* Bid.swift */; settings = {ASSET_TAGS = (); }; };
+		B6C88B351BB643A7006114F0 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B341BB643A7006114F0 /* Job.swift */; settings = {ASSET_TAGS = (); }; };
+		B6C88B371BB64533006114F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B361BB64533006114F0 /* Profile.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		B6C88B1D1BB62105006114F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6C88B1F1BB62105006114F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6C88B2A1BB63A3A006114F0 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		B6C88B2D1BB63FAF006114F0 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
+		B6C88B2F1BB6414A006114F0 /* JobsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
+		B6C88B321BB642F4006114F0 /* Bid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bid.swift; sourceTree = "<group>"; };
+		B6C88B341BB643A7006114F0 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		B6C88B361BB64533006114F0 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleReno.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C88B131BB62105006114F0 /* AppDelegate.swift */,
+				B6C88B311BB642E7006114F0 /* Model */,
 				B6C88B261BB6214C006114F0 /* Controllers */,
 				B6C88B251BB62118006114F0 /* Storyboards & Nibs */,
 				B6C88B271BB62155006114F0 /* Supporting Files */,
@@ -100,6 +111,7 @@
 		B6C88B261BB6214C006114F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6C88B2C1BB63F9E006114F0 /* Wall */,
 				B6C88B281BB639E8006114F0 /* Login */,
 				B6C88B291BB639F3006114F0 /* Signup */,
 			);
@@ -129,6 +141,25 @@
 				B6C88B2A1BB63A3A006114F0 /* SignupViewController.swift */,
 			);
 			name = Signup;
+			sourceTree = "<group>";
+		};
+		B6C88B2C1BB63F9E006114F0 /* Wall */ = {
+			isa = PBXGroup;
+			children = (
+				B6C88B2D1BB63FAF006114F0 /* JobsTableViewController.swift */,
+				B6C88B2F1BB6414A006114F0 /* JobsTableViewCell.swift */,
+			);
+			name = Wall;
+			sourceTree = "<group>";
+		};
+		B6C88B311BB642E7006114F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6C88B321BB642F4006114F0 /* Bid.swift */,
+				B6C88B341BB643A7006114F0 /* Job.swift */,
+				B6C88B361BB64533006114F0 /* Profile.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C88B2B1BB63A3A006114F0 /* SignupViewController.swift in Sources */,
+				B6C88B371BB64533006114F0 /* Profile.swift in Sources */,
+				B6C88B331BB642F4006114F0 /* Bid.swift in Sources */,
+				B6C88B2E1BB63FAF006114F0 /* JobsTableViewController.swift in Sources */,
+				B6C88B301BB6414A006114F0 /* JobsTableViewCell.swift in Sources */,
 				B6C88B161BB62105006114F0 /* InitialViewController.swift in Sources */,
+				B6C88B351BB643A7006114F0 /* Job.swift in Sources */,
 				B6C88B141BB62105006114F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
