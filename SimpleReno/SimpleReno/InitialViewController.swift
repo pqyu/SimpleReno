@@ -19,7 +19,7 @@ class InitialViewController: UIViewController {
 private extension InitialViewController {
     //login
     @IBAction func logInButtonPressed(sender: UIButton) {
-        
+        performSegueWithIdentifier("TabSegue", sender: nil)
     }
     
     //reset password
