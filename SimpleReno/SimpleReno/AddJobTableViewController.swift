@@ -17,61 +17,36 @@ final class AddJobTableViewController: UITableViewController {
         case ExpiryDate = 3
         case LocationSwitch = 4
     }
+    
+    private struct SegueIdentifiers {
+        static let CategorySegue = "CategoryPickerSegue"
+        static let ExpirySegue = "DatePickerSegue"
+    }
     @IBOutlet private weak var jobImageView: UIImageView!
     @IBOutlet private weak var descriptionTextView: UITextView!
     @IBOutlet private weak var categoryLabel: UILabel!
     @IBOutlet private weak var expiryDateLabel: UILabel!
-    
-    private var descriptionTextViewHeight: CGFloat = 0 {
-        didSet {
-            
-        }
-    }
 }
 
 //MARK: TableViewDelegate
 extension AddJobTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        view.endEditing(true) //hides all keyboards
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let defaultCellHeight: CGFloat = 44
-        switch indexPath.row {
-        case TableViewRows.Category.rawValue:
-            break
-        case TableViewRows.Image.rawValue:
-            break
-        case TableViewRows.Description.rawValue:
-            return 80 + descriptionTextViewHeight
-        case TableViewRows.ExpiryDate.rawValue:
-            break
-        case TableViewRows.LocationSwitch.rawValue:
-            break
-        default:
-            break
-        }
-        return defaultCellHeight
-    }
-}
-
-//MARK: UITextViewDelegate
-extension AddJobTableViewController: UITextViewDelegate {
-    func textViewDidChange(textView: UITextView) {
-        let updatedTextViewHeight = descriptionTextView.frame.height
-        if descriptionTextViewHeight != updatedTextViewHeight {
-            descriptionTextViewHeight = updatedTextViewHeight
-        }
-    }
-    
-    func textViewDidEndEditing(textView: UITextView) {
-        guard let text = descriptionTextView.text else {
-            //no text
-            return
-        }
-        guard let font = UIFont(name: "Helvetica Neue", size: 17) else { fatalError("could not instantiate Helvetica Neue font") }
-        let textHeight = text.heightForString(font, width: descriptionTextView.frame.width)
-        descriptionTextView.frame.size.height = textHeight
         
+        guard let row = TableViewRows(rawValue: indexPath.row) else { return }
+        switch row {
+        case .Category:
+            break
+        case .Image:
+            break
+        case .Description:
+            break
+        case .ExpiryDate:
+            performSegueWithIdentifier(SegueIdentifiers.ExpirySegue, sender: nil)
+        case .LocationSwitch:
+            break
+        }
     }
 }
 

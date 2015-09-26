@@ -22,6 +22,7 @@
 		B6C88B3A1BB64BE6006114F0 /* AddJobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B391BB64BE6006114F0 /* AddJobTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B6C88B3D1BB6583F006114F0 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B3C1BB6583F006114F0 /* JobDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B6C88B3F1BB672E1006114F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B3E1BB672E1006114F0 /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		B6CC4A611BB6BA7E0027CE47 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC4A601BB6BA7E0027CE47 /* DatePickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B6C88B391BB64BE6006114F0 /* AddJobTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJobTableViewController.swift; sourceTree = "<group>"; };
 		B6C88B3C1BB6583F006114F0 /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		B6C88B3E1BB672E1006114F0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B6CC4A601BB6BA7E0027CE47 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleReno.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C88B391BB64BE6006114F0 /* AddJobTableViewController.swift */,
+				B6CC4A601BB6BA7E0027CE47 /* DatePickerViewController.swift */,
 			);
 			name = AddJob;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				B6C88B161BB62105006114F0 /* InitialViewController.swift in Sources */,
 				B6C88B351BB643A7006114F0 /* Job.swift in Sources */,
 				B6C88B3D1BB6583F006114F0 /* JobDetailViewController.swift in Sources */,
+				B6CC4A611BB6BA7E0027CE47 /* DatePickerViewController.swift in Sources */,
 				B6C88B141BB62105006114F0 /* AppDelegate.swift in Sources */,
 				B6C88B3F1BB672E1006114F0 /* Extensions.swift in Sources */,
 				B6C88B3A1BB64BE6006114F0 /* AddJobTableViewController.swift in Sources */,

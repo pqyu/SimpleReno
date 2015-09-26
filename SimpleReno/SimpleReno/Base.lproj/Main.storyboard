@@ -469,20 +469,20 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q10-c5-KSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195" y="1050"/>
+            <point key="canvasLocation" x="1200" y="984"/>
         </scene>
         <!--Add Job-->
         <scene sceneID="Odv-zU-oVy">
             <objects>
                 <tableViewController id="ze9-gx-Udu" customClass="AddJobTableViewController" customModule="SimpleReno" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qwz-QP-gIG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qwz-QP-gIG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="oNk-Br-L7j">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="Vgf-aD-Rci">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Vgf-aD-Rci">
                                         <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vgf-aD-Rci" id="rCW-9G-v3w">
@@ -511,7 +511,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="FLh-DY-KJ4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="220" id="FLh-DY-KJ4">
                                         <rect key="frame" x="0.0" y="143" width="320" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FLh-DY-KJ4" id="VHg-FB-7du">
@@ -530,7 +530,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="vmO-p3-rS8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="vmO-p3-rS8">
                                         <rect key="frame" x="0.0" y="363" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vmO-p3-rS8" id="iu6-Do-eeO">
@@ -548,9 +548,6 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="ze9-gx-Udu" id="WKh-q0-erJ"/>
-                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -563,7 +560,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="5hl-Oc-oOC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="5hl-Oc-oOC">
                                         <rect key="frame" x="0.0" y="484" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hl-Oc-oOC" id="cgb-cF-YxU">
@@ -641,11 +638,63 @@
                         <outlet property="descriptionTextView" destination="hZk-zb-5Xt" id="rHL-kq-5WE"/>
                         <outlet property="expiryDateLabel" destination="d4V-ff-rNn" id="Fd2-ib-g22"/>
                         <outlet property="jobImageView" destination="wgZ-AX-D8v" id="3Lp-S3-3qO"/>
+                        <segue destination="KyN-yW-S7n" kind="show" identifier="DatePickerSegue" id="AmZ-P1-U67"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZi-Fn-WgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="1818"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="Ljs-Hj-X7z">
+            <objects>
+                <tableViewController id="KyN-yW-S7n" customClass="DatePickerViewController" customModule="SimpleReno" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MBx-hB-bOs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="q2s-zM-DuV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="218" id="SPt-4b-HDK">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="218"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SPt-4b-HDK" id="044-IC-KJN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tcL-ZL-2t1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="140268823.01695502">
+                                                        <!--2005-06-12 11:33:43 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tcL-ZL-2t1" firstAttribute="top" secondItem="044-IC-KJN" secondAttribute="top" id="fOf-Tl-S9r"/>
+                                                <constraint firstItem="tcL-ZL-2t1" firstAttribute="leading" secondItem="044-IC-KJN" secondAttribute="leading" id="l12-yd-T1n"/>
+                                                <constraint firstItem="tcL-ZL-2t1" firstAttribute="centerY" secondItem="044-IC-KJN" secondAttribute="centerY" id="r6S-wq-9Bp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="KyN-yW-S7n" id="eRH-LC-bEz"/>
+                            <outlet property="delegate" destination="KyN-yW-S7n" id="5pJ-nb-M0D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="JeU-Pq-3iQ">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="u2p-yH-5GE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="tcL-ZL-2t1" id="Mqd-m3-ge0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uo8-of-NCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="1818"/>
         </scene>
         <!--Item-->
         <scene sceneID="iHS-mL-2P6">
