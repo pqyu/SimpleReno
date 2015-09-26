@@ -11,13 +11,13 @@ import ParseUI
 class JobsTableViewCell: PFTableViewCell {
     @IBOutlet weak var jobImageView: PFImageView!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var descriptionTextLabel: UILabel!
     
     func populateCell(job: Job) {
         jobImageView.file = job.photo
         jobImageView.loadInBackground()
         categoryLabel.text = job.category
-        descriptionText.text = job.descriptionText
+        descriptionTextLabel.text = job.descriptionText
     }
 }
 
