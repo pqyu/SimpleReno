@@ -547,7 +547,10 @@
                                                     <rect key="frame" x="11" y="36" width="304" height="76.5"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="ze9-gx-Udu" id="WKh-q0-erJ"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
