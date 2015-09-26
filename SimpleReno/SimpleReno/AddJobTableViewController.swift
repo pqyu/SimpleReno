@@ -28,6 +28,14 @@ final class AddJobTableViewController: UITableViewController {
     @IBOutlet private weak var expiryDateLabel: UILabel!
 }
 
+//MARK: UITextViewDelegate 
+extension AddJobTableViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(textView: UITextView) {
+        if descriptionTextView.text == "Touch here to edit description" {
+            descriptionTextView.text = ""
+        }
+    }
+}
 //MARK: TableViewDelegate
 extension AddJobTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -37,19 +45,30 @@ extension AddJobTableViewController {
         guard let row = TableViewRows(rawValue: indexPath.row) else { return }
         switch row {
         case .Category:
-            break
+            performSegueWithIdentifier(SegueIdentifiers.CategorySegue, sender: nil)
         case .Image:
-            break
+            getPhotoFromImagePicker()
         case .Description:
-            break
+            descriptionTextView.becomeFirstResponder()
         case .ExpiryDate:
-            performSegueWithIdentifier(SegueIdentifiers.ExpirySegue, sender: nil)
+            break
         case .LocationSwitch:
             break
         }
     }
 }
 
+//MARK: UIImagePickerControllerDelegate
+extension AddJobTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            jobImageView.image = image
+        } else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            jobImageView.image = image
+        }
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
 //MARK: @IBActions
 private extension AddJobTableViewController {
     @IBAction func locationSwitchFlipped(sender: UISwitch) {
@@ -59,3 +78,23 @@ private extension AddJobTableViewController {
         
     }
 }
+
+//MARK: Private helper methods
+private extension AddJobTableViewController {
+    func getPhotoFromImagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .Default) { _ in
+            imagePicker.sourceType = .Camera
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+        let imageLibraryAction = UIAlertAction(title: "Library", style: .Default) { _ in
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+        alertController.addAction(cameraAction)
+        alertController.addAction(imageLibraryAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+}
+
