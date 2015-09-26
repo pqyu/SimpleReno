@@ -482,8 +482,37 @@
                         <sections>
                             <tableViewSection id="oNk-Br-L7j">
                                 <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="Vgf-aD-Rci">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vgf-aD-Rci" id="rCW-9G-v3w">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91U-Vt-aiH">
+                                                    <rect key="frame" x="16" y="12" width="70" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Select a Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJ1-g6-JdH">
+                                                    <rect key="frame" x="94" y="12.5" width="185" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FJ1-g6-JdH" secondAttribute="trailing" id="FJv-4C-dfU"/>
+                                                <constraint firstItem="91U-Vt-aiH" firstAttribute="leading" secondItem="rCW-9G-v3w" secondAttribute="leadingMargin" constant="8" id="MWh-rt-CfX"/>
+                                                <constraint firstItem="FJ1-g6-JdH" firstAttribute="leading" secondItem="91U-Vt-aiH" secondAttribute="trailing" constant="8" id="Qjh-yg-wmc"/>
+                                                <constraint firstItem="FJ1-g6-JdH" firstAttribute="centerY" secondItem="91U-Vt-aiH" secondAttribute="centerY" id="g7v-Y8-iJd"/>
+                                                <constraint firstItem="91U-Vt-aiH" firstAttribute="centerY" secondItem="rCW-9G-v3w" secondAttribute="centerY" id="wXE-Pd-7E6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="FLh-DY-KJ4">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="220"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FLh-DY-KJ4" id="VHg-FB-7du">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>
@@ -502,7 +531,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="vmO-p3-rS8">
-                                        <rect key="frame" x="0.0" y="319" width="320" height="121"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vmO-p3-rS8" id="iu6-Do-eeO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="120.5"/>
@@ -528,35 +557,6 @@
                                                 <constraint firstItem="hZk-zb-5Xt" firstAttribute="leading" secondItem="iu6-Do-eeO" secondAttribute="leadingMargin" constant="3" id="iC2-lK-MZI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hZk-zb-5Xt" secondAttribute="bottom" id="rrv-k1-aP7"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="hZk-zb-5Xt" secondAttribute="trailing" constant="-3" id="u8E-Xa-8cZ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="Vgf-aD-Rci">
-                                        <rect key="frame" x="0.0" y="440" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vgf-aD-Rci" id="rCW-9G-v3w">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91U-Vt-aiH">
-                                                    <rect key="frame" x="16" y="12" width="70" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Select a Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJ1-g6-JdH">
-                                                    <rect key="frame" x="94" y="12.5" width="185" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FJ1-g6-JdH" secondAttribute="trailing" id="FJv-4C-dfU"/>
-                                                <constraint firstItem="91U-Vt-aiH" firstAttribute="leading" secondItem="rCW-9G-v3w" secondAttribute="leadingMargin" constant="8" id="MWh-rt-CfX"/>
-                                                <constraint firstItem="FJ1-g6-JdH" firstAttribute="leading" secondItem="91U-Vt-aiH" secondAttribute="trailing" constant="8" id="Qjh-yg-wmc"/>
-                                                <constraint firstItem="FJ1-g6-JdH" firstAttribute="centerY" secondItem="91U-Vt-aiH" secondAttribute="centerY" id="g7v-Y8-iJd"/>
-                                                <constraint firstItem="91U-Vt-aiH" firstAttribute="centerY" secondItem="rCW-9G-v3w" secondAttribute="centerY" id="wXE-Pd-7E6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
