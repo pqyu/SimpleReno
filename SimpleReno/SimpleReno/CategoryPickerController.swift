@@ -10,8 +10,18 @@ import UIKit
 
 final class CategoryPickerController: UITableViewController {
     @IBOutlet private weak var categoryPicker: UIPickerView!
+    weak var delegate: AddJobTableViewController?
 }
 
+//MARK: @IBActions
+private extension CategoryPickerController {
+    @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
+        let selectedRow = categoryPicker.selectedRowInComponent(0)
+        delegate?.category = categories[selectedRow]
+        navigationController?.popViewControllerAnimated(true)
+    }
+}
+//MARK: PickerDataSource
 extension CategoryPickerController: UIPickerViewDataSource {
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return categories.count //global in Categories.swift... will encapsulate properly if I have time
@@ -22,6 +32,7 @@ extension CategoryPickerController: UIPickerViewDataSource {
     }
 }
 
+//MARK: PickerDelegate
 extension CategoryPickerController: UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return categories[row]

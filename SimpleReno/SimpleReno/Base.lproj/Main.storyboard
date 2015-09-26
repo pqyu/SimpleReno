@@ -670,7 +670,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Job" id="Y4w-S5-B0A">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="SUJ-hO-gAh">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="SUJ-hO-gAh">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="ze9-gx-Udu" id="953-4o-NO2"/>
                             </connections>
@@ -681,6 +681,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="FJ1-g6-JdH" id="MCL-jU-T3t"/>
                         <outlet property="descriptionTextView" destination="hZk-zb-5Xt" id="rHL-kq-5WE"/>
+                        <outlet property="doneBarButton" destination="SUJ-hO-gAh" id="EP9-iL-FLn"/>
                         <outlet property="expiryDateLabel" destination="d4V-ff-rNn" id="Fd2-ib-g22"/>
                         <outlet property="jobImageView" destination="wgZ-AX-D8v" id="3Lp-S3-3qO"/>
                         <segue destination="0Q9-dj-hoQ" kind="show" identifier="CategoryPickerSegue" id="vRb-KN-DcZ"/>
@@ -731,7 +732,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Choose Category" id="mm6-sv-o0N">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="apu-ZY-PY1"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="apu-ZY-PY1">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="0Q9-dj-hoQ" id="PoL-db-B5N"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="categoryPicker" destination="iO6-vg-VHm" id="hVZ-D3-aPd"/>
