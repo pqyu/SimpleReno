@@ -20,6 +20,7 @@
 		B6C88B351BB643A7006114F0 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B341BB643A7006114F0 /* Job.swift */; settings = {ASSET_TAGS = (); }; };
 		B6C88B371BB64533006114F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B361BB64533006114F0 /* Profile.swift */; settings = {ASSET_TAGS = (); }; };
 		B6C88B3A1BB64BE6006114F0 /* AddJobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B391BB64BE6006114F0 /* AddJobTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B6C88B3D1BB6583F006114F0 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C88B3C1BB6583F006114F0 /* JobDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B6C88B341BB643A7006114F0 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		B6C88B361BB64533006114F0 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B6C88B391BB64BE6006114F0 /* AddJobTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJobTableViewController.swift; sourceTree = "<group>"; };
+		B6C88B3C1BB6583F006114F0 /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		CF382C5820CCBAF7756B6DF4 /* Pods-SimpleReno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleReno.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleReno/Pods-SimpleReno.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +115,8 @@
 		B6C88B261BB6214C006114F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B6C88B2C1BB63F9E006114F0 /* Wall */,
+				B6C88B2C1BB63F9E006114F0 /* JobWall */,
+				B6C88B3B1BB65819006114F0 /* JobDetail */,
 				B6C88B381BB64BD5006114F0 /* AddJob */,
 				B6C88B281BB639E8006114F0 /* Login */,
 				B6C88B291BB639F3006114F0 /* Signup */,
@@ -146,13 +149,13 @@
 			name = Signup;
 			sourceTree = "<group>";
 		};
-		B6C88B2C1BB63F9E006114F0 /* Wall */ = {
+		B6C88B2C1BB63F9E006114F0 /* JobWall */ = {
 			isa = PBXGroup;
 			children = (
 				B6C88B2D1BB63FAF006114F0 /* JobsTableViewController.swift */,
 				B6C88B2F1BB6414A006114F0 /* JobsTableViewCell.swift */,
 			);
-			name = Wall;
+			name = JobWall;
 			sourceTree = "<group>";
 		};
 		B6C88B311BB642E7006114F0 /* Model */ = {
@@ -171,6 +174,14 @@
 				B6C88B391BB64BE6006114F0 /* AddJobTableViewController.swift */,
 			);
 			name = AddJob;
+			sourceTree = "<group>";
+		};
+		B6C88B3B1BB65819006114F0 /* JobDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B6C88B3C1BB6583F006114F0 /* JobDetailViewController.swift */,
+			);
+			name = JobDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				B6C88B301BB6414A006114F0 /* JobsTableViewCell.swift in Sources */,
 				B6C88B161BB62105006114F0 /* InitialViewController.swift in Sources */,
 				B6C88B351BB643A7006114F0 /* Job.swift in Sources */,
+				B6C88B3D1BB6583F006114F0 /* JobDetailViewController.swift in Sources */,
 				B6C88B141BB62105006114F0 /* AppDelegate.swift in Sources */,
 				B6C88B3A1BB64BE6006114F0 /* AddJobTableViewController.swift in Sources */,
 			);

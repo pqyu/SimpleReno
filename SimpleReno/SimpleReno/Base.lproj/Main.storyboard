@@ -348,6 +348,7 @@
                                     <outlet property="categoryLabel" destination="w3T-q6-2zZ" id="NiM-IM-N6F"/>
                                     <outlet property="descriptionText" destination="QTE-3f-wsj" id="KdM-l8-ANU"/>
                                     <outlet property="jobImageView" destination="I8E-wP-iPO" id="TCu-3F-0Xu"/>
+                                    <segue destination="kpO-Hq-yl8" kind="show" identifier="JobDetailSegue" id="az5-wN-Xth"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -367,6 +368,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6Z-w4-0sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="1050"/>
+        </scene>
+        <!--Job Detail View Controller-->
+        <scene sceneID="pgN-is-6Gb">
+            <objects>
+                <tableViewController id="kpO-Hq-yl8" customClass="JobDetailViewController" customModule="SimpleReno" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lCL-9s-dqk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="hft-8w-Zg5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1Wb-n4-Re9">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Wb-n4-Re9" id="wUi-GD-j71">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WQo-jW-QDN">
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQo-jW-QDN" id="kEg-b8-hpv">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dYD-B9-mzc">
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYD-B9-mzc" id="8JY-z9-5nX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kpO-Hq-yl8" id="mKq-yO-11L"/>
+                            <outlet property="delegate" destination="kpO-Hq-yl8" id="WrE-yq-xal"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LG3-N6-KrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="1050"/>
         </scene>
         <!--Add Job-->
         <scene sceneID="Odv-zU-oVy">
@@ -550,7 +599,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Job" id="Y4w-S5-B0A">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="SUJ-hO-gAh"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="SUJ-hO-gAh">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="ze9-gx-Udu" id="953-4o-NO2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
@@ -564,7 +617,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZi-Fn-WgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="1050"/>
+            <point key="canvasLocation" x="786" y="1818"/>
         </scene>
         <!--Item-->
         <scene sceneID="iHS-mL-2P6">
