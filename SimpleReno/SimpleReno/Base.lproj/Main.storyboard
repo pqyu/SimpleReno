@@ -315,7 +315,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="111.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-wP-iPO" customClass="PFImageView">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="getAccountButton" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-wP-iPO" customClass="PFImageView">
                                             <rect key="frame" x="8" y="8" width="115" height="95.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="categoryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3T-q6-2zZ">
@@ -324,29 +324,27 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="descriptionText" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QTE-3f-wsj">
-                                            <rect key="frame" x="131" y="36" width="156" height="67.5"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptionTextLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27B-m8-C44">
+                                            <rect key="frame" x="131" y="36" width="156" height="40"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="w3T-q6-2zZ" firstAttribute="leading" secondItem="I8E-wP-iPO" secondAttribute="trailing" constant="8" id="3AY-5I-aPJ"/>
-                                        <constraint firstItem="QTE-3f-wsj" firstAttribute="leading" secondItem="I8E-wP-iPO" secondAttribute="trailing" constant="8" id="6yr-08-jds"/>
-                                        <constraint firstItem="QTE-3f-wsj" firstAttribute="bottom" secondItem="I8E-wP-iPO" secondAttribute="bottom" id="9ev-Ug-6dF"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="I8E-wP-iPO" secondAttribute="bottom" id="CaP-QX-v0S"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="QTE-3f-wsj" secondAttribute="trailing" constant="-8" id="DFh-Vf-mo9"/>
+                                        <constraint firstItem="27B-m8-C44" firstAttribute="leading" secondItem="w3T-q6-2zZ" secondAttribute="leading" id="GMh-hH-rkl"/>
+                                        <constraint firstItem="27B-m8-C44" firstAttribute="top" secondItem="w3T-q6-2zZ" secondAttribute="bottom" constant="8" id="LG4-nq-dGA"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="I8E-wP-iPO" secondAttribute="leading" id="aY7-vE-BYZ"/>
                                         <constraint firstItem="I8E-wP-iPO" firstAttribute="width" secondItem="9Ue-5X-NIl" secondAttribute="width" multiplier="0.4" id="b3a-UC-AD4"/>
-                                        <constraint firstItem="QTE-3f-wsj" firstAttribute="top" secondItem="w3T-q6-2zZ" secondAttribute="bottom" constant="8" id="sPU-Oe-Xg8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="27B-m8-C44" secondAttribute="trailing" constant="-8" id="vvO-gE-ooM"/>
                                         <constraint firstItem="w3T-q6-2zZ" firstAttribute="top" secondItem="I8E-wP-iPO" secondAttribute="top" id="xdF-LN-XER"/>
                                         <constraint firstAttribute="topMargin" secondItem="I8E-wP-iPO" secondAttribute="top" id="zxO-Eg-dFk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryLabel" destination="w3T-q6-2zZ" id="NiM-IM-N6F"/>
-                                    <outlet property="descriptionText" destination="QTE-3f-wsj" id="KdM-l8-ANU"/>
                                     <outlet property="jobImageView" destination="I8E-wP-iPO" id="TCu-3F-0Xu"/>
                                 </connections>
                             </tableViewCell>
